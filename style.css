@@ -356,6 +356,9 @@ section .title::after{
     padding: 30px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    align-self: normal;
+    display: flex;
+    flex-direction: column;
 }
 .portfolio .port-content .card:hover{
     background: crimson;
@@ -366,9 +369,9 @@ section .title::after{
 .portfolio .port-content .card:hover .box{
     transform: scale(1.05);
 }
-.portfolio .port-content .card .box .live{
+.portfolio .port-content .card  .live{
     background-image: linear-gradient(to right, #000428 0%, #004e92  51%, #000428  100%);
-    margin: 10px;
+    margin:10px;
     padding: 5px 26px;
     text-align: center;
     text-transform: uppercase;
@@ -380,13 +383,13 @@ section .title::after{
     display: inline-block;
     font-size: 20px;
 }
-.portfolio .port-content .card .box .live:hover{
+.portfolio .port-content .card  .live:hover{
     background-position: right center;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
-.portfolio .port-content .card .box .github{
+.portfolio .port-content .card  .github{
     background-image: linear-gradient(to right, #EB5757 0%, #000000  51%, #EB5757  100%);
     margin: 10px;
     padding: 5px 10px;
@@ -400,17 +403,18 @@ section .title::after{
     display: inline-block;
     font-size: 20px;
 }
-.portfolio .port-content .card .box .github:hover{
+.portfolio .port-content .card .github:hover{
     background-position: right center;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
-
-.portfolio .port-content .card .box img{
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+.portfolio .port-content .card .btn-pos{
+    margin-top: auto;
+}
+.portfolio .port-content .card .box .c-img{
+    max-width: 100%;
+    height: 32vh;
 }
 .portfolio .port-content .card .text{
     font-size: 25px;
@@ -703,8 +707,9 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .portfolio .port-content .card{
-        width: 100%;
+    .portfolio .port-content .card .box .c-img{
+        max-width: 100%;
+        height: 28vh;
     }
 }
 
@@ -739,5 +744,8 @@ footer span a:hover{
     }
     .scroll-up-btn.show{
         bottom: 85px;
+    }
+    .portfolio .port-content .card{
+        width: 100%;
     }
 }
